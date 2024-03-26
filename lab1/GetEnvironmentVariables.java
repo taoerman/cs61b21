@@ -27,7 +27,7 @@ public class GetEnvironmentVariables {
         String source = null;
         if (yourOS.contains("mac")) {
             String version = System.getProperty("os.version");
-            if (SHELL.equals("zsh")) {
+            if ("zsh".equals(SHELL)) {
                 repo = catalina.replace("{variable}", "REPO_DIR").replace("{value}", REPO_DIR);
                 snaps = catalina.replace("{variable}", "SNAPS_DIR").replace("{value}", SNAPS_DIR);
                 source = catalinaSource;

@@ -139,7 +139,7 @@ class Utils {
      * @param message message to print
      */
     public static void exitWithError(String message) {
-        if (message != null && !message.equals("")) {
+        if (message != null && !"".equals(message)) {
             System.out.println(message);
         }
         System.exit(-1);
