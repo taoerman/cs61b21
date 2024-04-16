@@ -1,5 +1,6 @@
 package game2048;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 import ucb.util.CommandArgs;
@@ -27,7 +28,7 @@ public class Main {
             System.exit(1);
         }
 
-        Random gen = new Random();
+        Random gen = new SecureRandom();
         if (options.contains("--seed")) {
             gen.setSeed(options.getLong("--seed"));
         }
