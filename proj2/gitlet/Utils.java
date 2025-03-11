@@ -1,5 +1,6 @@
 package gitlet;
 
+import io.github.pixee.security.ObjectInputFilters;
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -143,6 +144,7 @@ class Utils {
         try {
             ObjectInputStream in =
                 new ObjectInputStream(new FileInputStream(file));
+            ObjectInputFilters.enableObjectFilterIfUnprotected(in);
             T result = expectedClass.cast(in.readObject());
             in.close();
             return result;
