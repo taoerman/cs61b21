@@ -1,5 +1,6 @@
 package bstmap;
 
+import java.security.SecureRandom;
 import java.util.regex.Pattern;
 import java.util.Random;
 
@@ -11,7 +12,7 @@ public class StringUtils {
     private static final int ALPHABET_SIZE = 26;
 
     /** Random number generator for this class. */
-    private static Random r = new Random();
+    private static Random r = new SecureRandom();
 
     /** Sets random seed to L so that results of randomString are predictable.*/
     public static void setSeed(long l) {
